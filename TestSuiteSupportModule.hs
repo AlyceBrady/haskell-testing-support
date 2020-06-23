@@ -70,7 +70,7 @@ instance Show TestItem where
         showFormatted :: TestItem -> String -> String
         showFormatted (Test description test) indentation =
             indentation ++ description ++ ": " ++
-                           (if test then "Passed" else "Failed")
+                           (if test then "--Passed--" else "--Failed--")
         showFormatted (TestSuite description []) indentation =
             indentation ++ description
         showFormatted (TestSuite description testList ) indentation =
